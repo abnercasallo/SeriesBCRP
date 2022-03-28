@@ -50,6 +50,6 @@ verificamos con pip list y luego pip show -f seriesbcrperu (nombre del paquete)
 si se ha instalado correctamente (se corre el comando en el directorio mismo de paquetes)
 
 ###ACTUALIZACIONES
-Se tiene que primero actualizar el dist
-py -m twine upload --skip-existing dist/*
+
+
 fuente: https://packaging.python.org/en/latest/tutorials/packaging-projects/

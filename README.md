@@ -1,2 +1,2 @@
-# TimeSeries-BCRP
+#   SeriesBCRP
 This repository will contain a package to work with time series from BCRP

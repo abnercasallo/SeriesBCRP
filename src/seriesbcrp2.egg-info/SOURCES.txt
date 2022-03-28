@@ -1,0 +1,11 @@
+LICENSE
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/seriesbcrp2/__init__.py
+src/seriesbcrp2/data.py
+src/seriesbcrp2.egg-info/PKG-INFO
+src/seriesbcrp2.egg-info/SOURCES.txt
+src/seriesbcrp2.egg-info/dependency_links.txt
+src/seriesbcrp2.egg-info/top_level.txt

@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: seriesbcrp2
+Version: 0.0.2
+Summary: Time Series analysis with data from BCRP
+Home-page: https://github.com/abnercasallo/TimeSeries-BCRP
+Author: abnercasallo
+Author-email: abner.casallo@unmsm.edu.pe
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/abnercasallo/SeriesBCRP/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+License-File: LICENSE.txt
+
+#   SeriesBCRP
+This repository will contain a package to work with time series from BCRP
+
+
