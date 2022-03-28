@@ -1,0 +1,55 @@
+
+1. Crear Virtual Environment with terminal en la carpeta que estoy trabajando: py -m venv D:\Git-Hub\TimeSeries-BCRP\Package\venv
+o py -3 -m venv .venv
+2. Activar con .\.venv\Scripts\activate (recuerda que tienes que estar en el directorio donde está en el .venv
+2. Instala los paquetes que necesites pip install ....
+
+
+####BUG: & : No se puede cargar el archivo D:\Git-Hub\TimeSeries-BCRP\Package\.venv\Scripts\Activate.ps1 porque la ejecución de scripts está deshabilitada en este 
+sistema. Para obtener más información, vea el tema about_Execution_Policies en http://go.microsoft.com/fwlink/?LinkID=135170.
+
+SOLUCIÓN: En PowerShell (abrir como administrador):
+Set-ExecutionPolicy Unrestricted
+S
+
+Con esto ya podremos acceder al envirioment
+
+
+PASOS PARA CREACIÓN DEL PAQUETE (en el directorio mayor):
+
+OJO, RESPETAR ESTA ESTRUCTURA ES FUNDAMENTAL:
+
+packaging_tutorial/
++-- LICENSE
++-- pyproject.toml
++-- README.md
++-- setup.cfg
++-- src/
+¦   +-- example_package/
+¦       +-- __init__.py
+¦       +-- example.py
++-- tests/
+
+Previo: py -m pip install --upgrade pip
+1. py -m pip install --upgrade build
+2. py -m build
+3. Crear cuenta en https://test.pypi.org/
+4. py -m pip install --upgrade twine
+5.py -m twine upload --repository testpypi dist/*
+Me pedirá logearme, se podría usar token, pero con el username y contraseña corre bien
+ ERRORES COMUNES:
+* HTTPError: 403 Forbidden from https://test.pypi.org/legacy/
+The user 'abnercasallo' isn't allowed to upload to project 'package'. See https://test.pypi.org/help/#project-name for more information.
+
+Lo anterior significa que ya existe una librería llamada "package" y no tengo acceso a modificarla o cambiarla.
+Por eso el nombre del paquete debe ser uno que no esté, yo lo cambié por timeseriesbcrp
+
+
+####LUEGO INSTALAMOS EN LA PC PARA PROBAR
+verificamos con pip list y luego pip show -f seriesbcrperu (nombre del paquete)
+si se ha instalado correctamente (se corre el comando en el directorio mismo de paquetes)
+
+###ACTUALIZACIONES
+Se tiene que primero actualizar el dist
+py -m twine upload --skip-existing dist/*
+fuente: https://packaging.python.org/en/latest/tutorials/packaging-projects/
